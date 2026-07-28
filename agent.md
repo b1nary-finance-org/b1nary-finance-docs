@@ -1,11 +1,10 @@
-### Definition
+# Definition
 
 Operationally, a b1nary agent is the combination of:
-- Human creator
-- B1nary finance account/API key
-- IDE/Harness to run the agentic loop
-- A Github repository to store agent history
-- Instructions/Prompts
+- Human owner
+- B1nary finance account and API key
+- Agentic IDE/Harness workspace as a github repo
+- Prompts
 - Skills
 - Memory
 
