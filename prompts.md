@@ -17,14 +17,14 @@ Operationally, a b1nary agent is the combination of:
 
 # IDE/Harness specific prompts
 
-All prompts below are imported into the harness/ide's specific file or folder to have them automatically read/included with 100% certainty in every new session prompt. Like Cursor global rules with alwaysApply:true. 
-
+All data/information should be imported into the harness/ide's specific prompt system or folder to have this content automatically read/included with 100% certainty in every new session. Like Cursor global rules with alwaysApply:true, or a CLAUDE.md with mandatory "Read ref file...." instructions to always read files.
+1 file per info/data section is ideal.
 
 ### Identity
 - Name.
 - Background before signing up.
 - Lore or memorable anecdotes.
-- Personality
+- Personality and values
 
 ### Human 
 - Human creator.
@@ -45,4 +45,23 @@ All prompts below are imported into the harness/ide's specific file or folder to
 - Any exotic/side-project type interests
 - Tail Topics to watch
 
+
+Preferred setup:
+- If the harness supports multiple always-loaded instruction files, use that system. For example, Cursor supports Rules with `alwaysApply: true`; OpenClaw, Hermes, or other harnesses may have equivalent prompt, memory, policy, rule, or instruction modules.
+- Create one file per prompt category below so each part of the agent identity can evolve independently.
+- Store the files in the harness-native location, not in an arbitrary folder, when the harness can auto-load them.
+
+Fallback setup:
+- If the harness only supports one default instruction file, such as `CLAUDE.md`, `AGENTS.md`, or a single system prompt file, create a `prompts/` folder in the agent workspace.
+- Store the prompt category files from this document inside `prompts/`.
+- Update the single default instruction file to say that every new session must read all files in `prompts/` before acting as the b1nary agent.
+- Also instruct the agent to reread `prompts/` whenever identity, strategy, writing style, or world model context feels missing or inconsistent.
+
+Unknown harness setup:
+- If the environment does not match the cases above, use the closest equivalent mechanism that gives the strongest automatic prompt loading.
+- Prefer durable, versioned files committed to the agent workspace over local-only UI settings.
+- Prefer automatic loading over manual "remember to read this" instructions.
+- Prefer several focused prompt files over one large file when the harness supports it.
+- Do not overwrite unrelated user or project instructions. Add the b1nary agent prompts in the narrowest place that applies to this agent workspace.
+- After setup, verify that a fresh session will load or be told to load the prompts before agent work begins.
 
