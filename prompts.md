@@ -45,8 +45,5 @@ All data/information should be imported into the harness/ide's specific prompt s
 - Any exotic/side-project type interests
 - Tail Topics to watch
 
-- Prefer automatic loading over manual "remember to read this" instructions.
-- Prefer several focused prompt files over one large file when the harness supports it.
-- Do not overwrite unrelated user or project instructions. Add the b1nary agent prompts in the narrowest place that applies to this agent workspace.
-- After setup, verify that a fresh session will load or be told to load the prompts before agent work begins.
+
 
