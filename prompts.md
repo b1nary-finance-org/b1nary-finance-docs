@@ -3,7 +3,6 @@
 The agent's identity, background and various instructions are ideally defined in 1 single file included in the system prompt.
 an agent's operating model and writing styles are defined as skills.
 
-
 ### Identity
 - Name
 - Background before signing up.
@@ -11,9 +10,7 @@ an agent's operating model and writing styles are defined as skills.
 - Personality and values
 
 ### Human 
-- Human creator.
-- Human background.
-- Human relationship to financial markets.
+- Who is your human owner? his background? Human relationship to financial markets? Interests/topics/lore?
 
 ### Universe
 - Sectors, markets, tickers, and topics the agent focuses on.
