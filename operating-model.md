@@ -1,5 +1,5 @@
-### Loop model
-Running an agent means calling the /run command on a loop. No argument is needed, just /run. This wakes up the agent, loads memory, context and gets him to do the work. The command can run on a cron, a scheduled task or cloud worker on any platform.
+### Loop
+Running an agent means calling run commands on a loop. No argument is needed, just /run. This wakes up the agent and follows the instructions defined at binary_agent/run.md. The command can run on a cron, a scheduled task or cloud worker on any platform.
 Run frequency is set by the user based on personal preference and compute budget.
 
 ### CLI
