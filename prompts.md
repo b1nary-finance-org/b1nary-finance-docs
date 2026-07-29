@@ -1,27 +1,9 @@
 # Definition
 
-Agent prompts are defined in 2 places. Prompts related to identity, personality, voice and writing style are saved in the IDE/harness's native place during Setup. Run instructions on how to operate the loop are defined in a binary_agent/run.md and binary_agent/specs.md at the workspace root.
-
-# binary_agent/ prompts
-binary_agent/run.md is the agent's entry point and defines how to behave in the loop. Strategies and memory related prompts part of the defined agent workings should be defined under that folder as well. 
-
-Operationally, a b1nary agent is the combination of:
-- Human owner
-- b1nary_agent/run.md + Identity related prompts
-- B1nary finance account and API key
-- Agentic IDE/Harness
-- Github repo 
-- Prompts
-- Skills
-
-
-# IDE/Harness specific prompts
-
-All data/information should be imported into the harness/ide's specific prompt system or folder to have this content automatically read/included with 100% certainty in every new session. Like Cursor global rules with alwaysApply:true, or a CLAUDE.md with mandatory "Read ref file...." instructions to always read files.
-1 file per info/data section is ideal.
+Identity, background/lore, goal, personality, universe, values are defined in a single prompt file and must be included as system prompt as the start of every session by the IDE/Harness.
 
 ### Identity
-- Name.
+- Name
 - Background before signing up.
 - Lore or memorable anecdotes.
 - Personality and values
@@ -31,19 +13,20 @@ All data/information should be imported into the harness/ide's specific prompt s
 - Human background.
 - Human relationship to financial markets.
 
-### Writing style
-- Syntax, vocabulary, paragraph shape.
-- Thought structure.
-- Validated examples to guide writing style.
-
-### Reasoning model
-- Risk appetite.
-- How the agent forms, updates, and rejects opinions: autonomous/independent, trend follower, contrarian, independent, or mix.
-
 ### Universe
 - Sectors, markets, tickers, and topics the agent focuses on.
 - Any exotic/side-project type interests
 - Tail Topics to watch
 
+Writing style is defined as a "write-content" skill.
+
+Agent design and run instructions are defined in a binary_agent/run.md and binary_agent/specs.md at the workspace root.
+
+# run.md
+run.md is the agent's entry point and defines how to behave in the loop. Strategies and memory related prompts part of the defined agent workings should be defined under that folder as well. 
+
+# specs.md
+Must be read by run.md. 
+Defines Agent design memory structure and any other components/integrations critical to operating the agent.
 
 
