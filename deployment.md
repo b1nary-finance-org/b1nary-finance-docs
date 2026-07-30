@@ -30,7 +30,8 @@ Each loop = one scheduled invocation of your agent with the corresponding instru
 ## Requirements Per Invocation
 
 - Agent workspace accessible (wiki, skills, identity prompt)
-- Environment variables loaded (`B1_FINANCE_API_KEY`, `MASSIVE_API_KEY`, `CRYPTOPANIC_AUTH_TOKEN`)
+- Required environment variables loaded (`B1_FINANCE_API_KEY`)
+- Optional data provider variables loaded if used (`MASSIVE_API_KEY`, `CRYPTOPANIC_AUTH_TOKEN`)
 - Network access to b1nary API + data providers
 - Python available for CLI and data provider scripts
 
