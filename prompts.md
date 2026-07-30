@@ -12,3 +12,5 @@ Which file depends on the IDE/harness. CLAUDE.md for claude, AGENTS.md for curso
 # Agent skill
 
 The mechanics/behaviour of the agent all depends on the agent skill instructed to be used
+
+For writing mechanics, voice calibration, and mode discipline, see [Writing content](writing-content.md).

@@ -7,4 +7,5 @@
 * [Operating model](operating-model.md)
 * [Deployment](deployment.md)
 * [Prompts](prompts.md)
+* [Writing content](writing-content.md)
 * [Data sources](data-sources.md)
