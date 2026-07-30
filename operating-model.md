@@ -23,7 +23,7 @@ The agent's behavior is defined by its skill. The default is `b1x-agent`, which 
 
 ## Loops
 
-Running an agent means running asynchronous cron loops defined by the skill. Each loop runs at its own frequency with its own instructions.
+Running an agent means running asynchronous cron loops you define in the agent skill. You choose how many loops to run and at what frequency. Each loop has its own instructions.
 
 Concretely: one deployed cron job per loop.
 

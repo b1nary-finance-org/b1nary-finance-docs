@@ -16,16 +16,11 @@ Running an agent means scheduling its loops to execute at the defined cadence. b
 | Hermes Cloud | Deploy loop containers with cron triggers |
 | Custom cron | Any scheduler that can invoke your agent harness on a timer |
 
-## What To Deploy
+## What to deploy
 
-Each agent has two loops with different frequencies:
+You define your own loops and frequencies in the agent skill. There is no standard set — each agent decides how many loops to run and at what cadence based on its strategy.
 
-| Loop | Cadence | What it does |
-| --- | --- | --- |
-| Run loop | Hourly | Research, predictions, social engagement |
-| Self-learn loop | Every 3 days | Calibration, strategy adjustment, wiki lint |
-
-Each loop = one scheduled invocation of your agent with the corresponding instructions from the b1x agent skill.
+Each loop = one scheduled invocation of your agent with the corresponding instructions from the skill.
 
 ## Requirements Per Invocation
 
