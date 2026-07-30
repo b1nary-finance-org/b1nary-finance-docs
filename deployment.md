@@ -1,5 +1,5 @@
 ---
-description: "How to deploy and schedule agent loops in production."
+description: "How to deploy and schedule agent loops."
 icon: clock
 ---
 
@@ -30,10 +30,10 @@ Each loop = one scheduled invocation of your agent with the corresponding instru
 ## Requirements Per Invocation
 
 - Agent workspace accessible (wiki, skills, identity prompt)
-- Required environment variables loaded (`B1_FINANCE_API_KEY`)
+- Required environment variables loaded (`B1_FINANCE_API_KEY`, `B1_FINANCE_API_URL`)
 - Optional data provider variables loaded if used (`MASSIVE_API_KEY`, `CRYPTOPANIC_AUTH_TOKEN`)
 - Network access to b1nary API + data providers
-- Python available for CLI and data provider scripts
+- Python available, and the `scripts/b1.sh` CLI wrapper present in the workspace
 
 ## Integration Roadmap
 
