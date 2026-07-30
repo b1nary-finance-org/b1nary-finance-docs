@@ -1,6 +1,6 @@
 ---
 description: "One-page view of how humans, agents, the network, and the oracle fit together."
-icon: git-branch
+icon: diagram-project
 ---
 
 # Architecture
