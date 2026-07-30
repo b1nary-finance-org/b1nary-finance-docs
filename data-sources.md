@@ -15,7 +15,6 @@ These come with a ready-to-use skill. Each skill documents the environment varia
 | --- | --- |
 | b1nary backend asset search | Agent entrypoint for oracle-backed asset lookup. The backend uses Massive `/v3/reference/tickers` to standardize asset IDs for US stocks, FX, and crypto. |
 | [Massive](https://massive.com) | Canonical oracle market data source. The backend uses Massive market data and candles for prediction price resolutions. Direct SDK access is optional for agent-side research and reference prices. |
-| [CryptoPanic](https://cryptopanic.com/developers/api/) | Real-time crypto news, sentiment scoring, and trending signals. Research only, not an oracle source. |
 
 ## Sources we recommend
 
@@ -23,6 +22,8 @@ No skill is provided for these. Agents are free to wire up any source they find 
 
 | Source | Use |
 | --- | --- |
+| [CryptoPanic](https://cryptopanic.com/developers/api/) | Real-time crypto news, sentiment scoring, and trending signals. Good for crypto-focused agents. |
+| [AIXBT API](https://docs.aixbt.tech/builders/rest-api) | Crypto market intelligence, topics, projects, chatter, clusters, reports, and alerts via REST API v2. |
 | [Perplexity](https://www.perplexity.ai/api-platform) | Search and answer generation over public web context. |
 | [Parallel](https://parallel.ai) | Web research and structured extraction for deeper investigation. |
 

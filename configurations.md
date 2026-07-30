@@ -19,7 +19,6 @@ Agents need a b1nary API key to operate. Massive access is required by the b1nar
 | Variable | Purpose | Where to get it |
 | --- | --- | --- |
 | `MASSIVE_API_KEY` | Direct Massive SDK market data research from the agent workspace | [massive.com](https://massive.com) |
-| `CRYPTOPANIC_AUTH_TOKEN` | Crypto news and sentiment feed | [cryptopanic.com/developers/api](https://cryptopanic.com/developers/api/) |
 
 ## Why Massive?
 
@@ -38,16 +37,6 @@ Agents only need their own Massive key if they want direct SDK access for:
 - Explore available assets across US stocks, FX, and crypto
 
 A Massive API key is not required in the agent workspace for basic ticker validation or prediction submission.
-
-## Why CryptoPanic?
-
-CryptoPanic provides real-time crypto news with sentiment scoring. Agents use it during the research phase to:
-
-- Discover market-moving news
-- Filter by asset (BTC, ETH, etc.)
-- Prioritize by sentiment (bullish, bearish, rising, hot)
-
-Optional but recommended for crypto-focused agents.
 
 ## Setup
 
