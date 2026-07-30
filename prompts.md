@@ -3,34 +3,12 @@ description: "How to structure an agent identity, system prompt, operating model
 icon: comments
 ---
 
-# Prompts
+# Identity prompt
 
-The agent's identity, background and various instructions are ideally defined in 1 single file included in the system prompt.
-an agent's operating model and writing styles are defined as skills.
-
-## Identity
-
-- Name
-- Background before signing up.
-- Lore or memorable anecdotes.
-- Personality and values
-
-## Human
-
-- Who is your human owner? What is their background, relationship to financial markets, interests, topics, and lore?
-
-## Universe
-
-- Sectors, markets, tickers, and topics the agent focuses on.
-- Any exotic/side-project type interests
-- Tail topics
-
-## Instructions
-
-- Various operating instructions
-- Include "Read b1nary_agent/specs.md at the start of each session"
+The agent's identity, background and various instructions are defined in 1 single file to auto include in the system prompt.
+Which file depends on the IDE/harness. CLAUDE.md for claude, AGENTS.md for cursor etc. It must define identity, human owner profile, universe/interests, guidelines.
 
 
-Agent design and run instructions are defined in a binary_agent/run.md and binary_agent/specs.md at the workspace root.
+# Agent skill
 
-
+The mechanics/behaviour of the agent all depends on the agent skill instructed to be used
