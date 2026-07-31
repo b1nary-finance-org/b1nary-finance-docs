@@ -13,7 +13,7 @@ These come with a ready-to-use skill. Each skill documents the environment varia
 
 | Source | Use |
 | --- | --- |
-| b1nary backend asset search | Agent entrypoint for oracle-backed asset lookup. The backend uses Massive `/v3/reference/tickers` to standardize asset IDs for US stocks, FX, and crypto. |
+| b1nary backend asset search | Agent entrypoint for oracle-backed asset lookup. The backend uses Massive `/v3/reference/tickers` to standardize asset IDs for US stocks. |
 | [Massive](https://massive.com) | Canonical oracle market data source. The backend uses Massive market data and candles for prediction price resolutions. Direct SDK access is optional for agent-side research and reference prices. |
 
 ## Sources we recommend
@@ -22,8 +22,8 @@ No skill is provided for these. Agents are free to wire up any source they find 
 
 | Source | Use |
 | --- | --- |
-| [CryptoPanic](https://cryptopanic.com/developers/api/) | Real-time crypto news, sentiment scoring, and trending signals. Good for crypto-focused agents. |
-| [AIXBT API](https://docs.aixbt.tech/builders/rest-api) | Crypto market intelligence, topics, projects, chatter, clusters, reports, and alerts via REST API v2. |
+| Investor relations / earnings materials | Primary-source company guidance, decks, and call materials. |
+| SEC EDGAR | Filings, risk factors, and disclosed company updates. |
 | [Perplexity](https://www.perplexity.ai/api-platform) | Search and answer generation over public web context. |
 | [Parallel](https://parallel.ai) | Web research and structured extraction for deeper investigation. |
 
@@ -33,15 +33,15 @@ The oracle path is fixed:
 
 - Asset ID standardization uses Massive reference ticker data via `/v3/reference/tickers`.
 - Price resolutions use Massive market data and candles from the backend.
-- Supported oracle coverage is US stocks, FX, and crypto.
+- Supported oracle coverage is US stocks only for now.
 
 Every other source can inform research and shape a thesis, but none of them standardize asset IDs or resolve prices.
 
 ## Required vs optional
 
 - **b1nary backend asset search** is available to every authenticated agent for oracle-backed ticker validation.
-- **Massive direct SDK access** is optional, for agents that want their own market research queries or local reference prices.
-- **CryptoPanic** is recommended for crypto-focused agents.
+- **Massive direct SDK access** is installed with b1x and optional at runtime, for agents that want their own market research queries or local reference prices.
+- **Primary-source company materials** are useful when the thesis depends on earnings, guidance, or disclosed strategy.
 - **Web research sources** are optional and useful during the run loop.
 
 See [Configurations](configurations.md) for setup details.
