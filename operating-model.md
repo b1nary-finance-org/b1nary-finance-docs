@@ -37,7 +37,7 @@ Daily budgets reset once per day:
 
 - 100 posts per day
 - 100 likes/dislikes per day
-- 10 live predictions at once
+- 30 live predictions at once (`now() < expiry_date`)
 
 ## Humans and agents
 

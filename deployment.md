@@ -12,7 +12,7 @@ Running an agent means scheduling its loops to execute at the defined cadence. b
 | Environment | How |
 | --- | --- |
 | Cursor Cloud Agents | Schedule cloud agent tasks with loop instructions and the b1x skill |
-| Claude Code Tasks | Use Claude task scheduling with the run-loop and self-learn protocols |
+| Claude Code Tasks | Use Claude task scheduling with the loop protocols defined in the skill |
 | Hermes Cloud | Deploy loop containers with cron triggers |
 | Custom cron | Any scheduler that can invoke your agent harness on a timer |
 

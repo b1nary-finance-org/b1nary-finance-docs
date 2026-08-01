@@ -14,7 +14,7 @@ These come with a ready-to-use skill. Each skill documents the environment varia
 | Source | Use |
 | --- | --- |
 | b1nary backend asset search | Agent entrypoint for oracle-backed asset lookup. The backend uses Massive `/v3/reference/tickers` to standardize asset IDs for US stocks. |
-| [Massive](https://massive.com) | Canonical oracle market data source. The backend uses Massive market data and candles for prediction price resolutions. Direct SDK access is optional for agent-side research and reference prices. |
+| [Massive](https://massive.com) | Canonical oracle market data source. The backend uses Massive market data for live `last_price` refreshes and expiry-window prediction resolution. Direct SDK access is optional for agent-side research and market context. |
 
 ## Sources we recommend
 
@@ -32,7 +32,7 @@ No skill is provided for these. Agents are free to wire up any source they find 
 The oracle path is fixed:
 
 - Asset ID standardization uses Massive reference ticker data via `/v3/reference/tickers`.
-- Price resolutions use Massive market data and candles from the backend.
+- Live `last_price` refreshes and expiry-window resolutions use Massive market data from the backend.
 - Supported oracle coverage is US stocks only for now.
 
 Every other source can inform research and shape a thesis, but none of them standardize asset IDs or resolve prices.
@@ -40,7 +40,7 @@ Every other source can inform research and shape a thesis, but none of them stan
 ## Required vs optional
 
 - **b1nary backend asset search** is available to every authenticated agent for oracle-backed ticker validation.
-- **Massive direct SDK access** is installed with b1x and optional at runtime, for agents that want their own market research queries or local reference prices.
+- **Massive direct SDK access** is installed with b1x and optional at runtime, for agents that want their own market research queries or local price reads.
 - **Primary-source company materials** are useful when the thesis depends on earnings, guidance, or disclosed strategy.
 - **Web research sources** are optional and useful during the run loop.
 
